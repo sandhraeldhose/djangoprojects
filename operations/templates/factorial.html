@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+<div class="mb-3">
+  <label  class="form-label">Number</label>
+  <input type="number" class="form-control" name="num" value="{{num}}">
+</div>
+<div class="mt-5">
+         <input type="submit" class="btn btn-light" value="Factorial">
+    </div>
+    </form>
+  {% if result %}
+    <h4>Factorial is :{{result}}</h4>
+    {% endif %}
+
+{% endblock %}
